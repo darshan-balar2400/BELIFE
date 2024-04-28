@@ -1,0 +1,20 @@
+main {
+    padding: 20px;
+    /* background: linear-gradient(to bottom right, #CA302D, #BA262B, #A41726, #900A22, #a41532, #cc4b47, #ef5b5b,#e06862, #f39592, #ffa89c); */
+  }
+  
+  .section {
+    background-color: #FFFFFF; /* White background for sections */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .section h2 {
+    color: #810020; /* Burgundy for section headings */
+  }
+  
+  .section p {
+    color: #333; /* Dark grey text for paragraph */
+  }

@@ -1,0 +1,169 @@
+
+@use "./CSS/Common/common";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: myFont;
+    src: url("./assets/images/fonts/Blanka-Regular.otf");
+}
+
+@font-face{
+  font-family: myfont2;
+  src:url("./assets/images/fonts/CONSOLA.TTF");
+}
+
+@font-face {
+  font-family: myFont3;
+  src: url("./assets/images/fonts/Geist-Light-BF6569491dc9c01.otf");
+}
+
+body{
+  margin:0;
+  padding:0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: myFont3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@mixin loading_container() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  @content;
+
+  img {
+      width: 10rem;
+      height: 10rem;
+  }
+
+  .loader {
+      transform: translateX(-50%);
+      width: auto;
+      height: auto;
+      animation-name: loader;
+      animation-iteration-count: infinite;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+  }
+
+  @keyframes loader {
+      0% {
+          transform: rotate(0deg);
+      }
+
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+}
+
+@mixin loading_container_02() {
+  .loading_container_02 {
+      width: 100%;
+      height: max-content;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      @content;
+
+      img {
+          width: 10rem;
+          height: 10rem;
+      }
+
+      .loader {
+          transform: translateX(-50%);
+          width: auto;
+          height: auto;
+          animation-name: loader;
+          animation-iteration-count: infinite;
+          animation-duration: 2s;
+          animation-timing-function: linear;
+      }
+
+      @keyframes loader {
+          0% {
+              transform: rotate(0deg);
+          }
+
+          100% {
+              transform: rotate(360deg);
+          }
+      }
+  }
+}
+
+
+@import "./CSS/Components/why";
+@import "./CSS/Components/navbar";
+@import './CSS/Components/hero';
+@import "./CSS/Components/developer";
+@import "./CSS/Components/play";
+
+@import "./CSS/Components/sidemenu";
+@import './CSS/Components/support';
+@import "./CSS/Components/supplements";
+@import "./CSS/Components/help";
+@import "./CSS/Components/registration";
+@import "./CSS/Components/campaign";
+@import "./CSS/Components/analytics";
+@import "./CSS/Components/profile";
+// @import "./CSS/Components/footer";
+
+.loading_container {
+  .loader {
+    width: 64px;
+    height: 48px;
+    position: relative;
+    animation: split 1s ease-in infinite alternate;
+  }
+  .loader::before , .loader::after {
+    content: '';
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    transform: translateX(-10px);
+    background: #AC1C28;
+    opacity: 0.75;
+    backdrop-filter: blur(20px);
+  }
+  
+  .loader::after {
+    left: auto;
+    right: 0;
+    background: #E67772;
+    transform: translateX(10px);
+  }
+  
+  @keyframes split {
+   0% , 25%{ width: 64px }
+   100%{ width: 148px }
+  }
+    
+  height:94vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

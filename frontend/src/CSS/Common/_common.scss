@@ -1,0 +1,118 @@
+$boxShadow1: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+$boxShadow2 : rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+$boxShadow3:rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+$boxShadow4: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+
+$color1:#B61854;
+$color2: #B61854;
+$color3: #C75982;
+$color4: #000000;
+$color6: rgba(144, 12, 62, 0.3);
+$color5: rgba(0, 0, 0, 0.65);
+$borderColor: rgba(0, 0, 0, 0.08);
+$borderColor2:#F0F0F4;
+$darkColor:#595959;
+
+$fontFamily: 'Montserrat', sans-serif; // Medium
+$secondFamily: "Lustria"; // Medium
+
+$lightblue: #CFE2FF;
+$blue: #0D6EFD;
+$lightgreen: #D1E7DD;
+$green: green;
+$lightyellow : #FFF3CD;
+$yellow: #FFC107;
+$lightMainColor: rgba(182, 24, 84, 0.4);
+
+$boxShadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+// $boxShadow2:rgba(0, 0, 0, 0.08) 0px 4px 12px;
+$boxShadow2:rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.00) 0px 0px 0px 1px;
+$boxShadow3:rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.00) 0px 0px 0px 1px;
+
+
+$adminShadow : "";
+
+$letterSpacing: 0.175rem;
+$wordSpacing: 0.10rem;
+$textTranform: uppercase;
+
+$padding: 13px 100px;
+$padding2:13px 45px;
+
+@mixin button() {
+    padding: 0.7rem 0.9rem;
+    border-radius: 0.5rem;
+
+    font-weight: 600;
+    @content;
+}
+
+
+
+.border_hr {
+    width: 100%;
+    background-color: $color1;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    margin: 1.5rem 0rem;
+}
+
+.input {
+
+
+    p {
+        text-transform: $textTranform;
+        letter-spacing: $letterSpacing;
+        font-size: 1.3rem;
+        color: $color5;
+        font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        outline: none;
+        border: none;
+        border: 1px solid $borderColor;
+        padding: 0.8rem 1.5rem;
+        font-size: 1.5rem;
+        text-transform: none;
+        letter-spacing: 0;
+    }
+
+    .input_with_icon {
+        position: relative;
+
+        span {
+            position: absolute;
+            top: 50%;
+            right: 3%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        input {
+            padding-right: 4rem;
+        }
+    }
+
+    margin-bottom: 2rem;
+}
+
+.input_checkbox {
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 0;
+    margin: 3rem 0rem 1rem 0rem;
+    display: flex;
+    align-items: center;
+
+    span {
+        font-size: 1.3rem;
+    }
+}

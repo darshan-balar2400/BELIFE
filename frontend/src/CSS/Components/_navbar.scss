@@ -1,0 +1,159 @@
+.nav_container {
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px solid lightgray;
+    // box-shadow: common.$boxShadow1;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    .content {
+        // width: 100%;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+
+        width: 80%;
+        padding: 0.8rem;
+        // border: 1px solid red;
+
+        @media (max-width: 1000px) {
+            width: 90%;
+        }
+
+        @media (max-width: 800px) {
+        }
+
+        .left_nav {
+            display: flex;
+            align-items: center;
+
+            .logo {
+                display: flex;
+                align-items: center;
+
+                .logo_title {
+                    width: 100%;
+                    margin: 0px 0.8rem;
+                    display: flex;
+                    place-items: center;
+                    font-size: 1.4rem;
+                    margin-bottom: 0.4rem;
+
+                    // h1 {
+                    font-family: myFont;
+                    // }
+                }
+
+                // .image{
+                //     img{
+                //         width:4rem;
+                //         height:4rem;
+                //         border:1px solid red;
+                //     }
+                // }
+            }
+
+            .links {
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+
+                    li {
+                        list-style: none;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: gray;
+                }
+
+                @media (max-width: 700px) {
+                    display: none;
+                }
+
+                // @media (max-width: 800px) {
+                //     display: none;
+                // }
+
+                .version {
+                    @media (max-width: 700px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .right_nav {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            .sidemenu {
+                // border:1px solid red;
+                font-size: 1.5rem;
+                display: none;
+                @media (max-width: 700px) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .versions {
+        display:flex;
+        
+
+        .version {
+            width: max-content;
+            outline: none;
+            border: 1px solid gray;
+            border-radius: 0.3rem;
+            padding: 0.2rem 0.7rem;
+            display: flex;
+            align-items:center;
+            background-color: black;
+            color: white;
+            letter-spacing: 0.1rem;
+            font-weight: bold;
+
+        }
+        /* HTML: <div class="loader"></div> */
+        .loader {
+            margin-left:1rem;
+            width: 35px;
+            aspect-ratio: 1;
+            color: #dc1818;
+            background:
+                radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%) top left,
+                radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
+                linear-gradient(to bottom left, currentColor 42%, #0000 43%) bottom left,
+                linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .loader:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: inherit;
+            opacity: 0.4;
+            animation: l3 1s infinite;
+        }
+        @keyframes l3 {
+            to {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+    }
+}
